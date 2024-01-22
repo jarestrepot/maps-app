@@ -7,7 +7,7 @@ export const theme = {
     screens: {
       '3xl': '1800px'
     },
-    color: {
+    colors: {
       'san-marino': {
         '50': '#f2f6fc',
         '100': '#e2ebf7',

@@ -1,0 +1,10 @@
+<ul class="list-none mt-10 border p-3 rounded shadow-lg">
+  <li
+    *ngFor="let item of menuItems"
+    [routerLink]="[ item.router ]"
+    class="cursor-pointer transition-all duration-200 hover:rounded-md rounded-md text-center my-1 p-1 hover:bg-san-marino-300 dark:hover:bg-lima-300 underline underline-offset-4 decoration-san-marino-700 hover:no-underline"
+    routerLinkActive="bg-san-marino-500 dark:bg-lima-500 no-underline"
+  >
+    {{ item.name }}
+  </li>
+</ul>
