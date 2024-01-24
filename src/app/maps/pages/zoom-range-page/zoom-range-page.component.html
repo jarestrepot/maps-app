@@ -1,1 +1,33 @@
-<p>zoom-range-page works!</p>
+<div id="map" #map></div>
+
+<div class="p-2 fixed grid grid-cols-6 justify-center items-center w-full h-auto md:w-1/2 bg-transparent/60 bottom-8 left-2 rounded shadow-xl">
+  <div class="w-full flex h-8 p-2 items-center col-span-5">
+    <button
+      (click)="zoomOut()"
+      class="bg-gradient-to-r rounded px-3 from-blue-500 to-blue-700 hover:from-blue-700 hover:to-blue-500 hover:scale-105 transition-all duration-200  text-white"
+    > - </button>
+    <input
+      type="range"
+      class="form-range flex-1 cursor-pointer"
+      min="-2"
+      max="18"
+      [value]="zoom"
+      (input)="zoomChanged( zoomInput.value )"
+      #zoomInput
+    >
+    <button
+      (click)="zoomIn()"
+      class="bg-gradient-to-r rounded px-3 from-blue-500 to-blue-700 hover:from-blue-700 hover:to-blue-500 hover:scale-105 transition-all duration-200  text-white"
+    > + </button>
+  </div>
+  <div class="col-span-1 grid place-items-center text-san-marino-200">
+
+    <span class="form-label">
+      Zoom {{ zoom | number:'2.2-2' }}
+    </span>
+    <span class="form-label  text-center">
+      {{ currentLngLat.lng| number:'2.2-4' }} {{ currentLngLat.lat | number:'2.2-4' }}
+    </span>
+  </div>
+</div>
+
