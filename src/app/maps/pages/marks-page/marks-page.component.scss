@@ -1,0 +1,26 @@
+#map {
+  width: 100vw;
+  height: 100vh;
+}
+ul{
+  position:fixed;
+  top: 1.2rem;
+  right: 1.2rem;
+  z-index: 999;
+}
+li{
+  padding: .4rem;
+  border-radius: .2rem;
+  // transition: all .3s ease-in-out;
+  color: black;
+  font-size: 1.2rem;
+}
+// li:hover{
+//   transform: translateX(-20px) rotate(5deg) translateY(1px);
+// }
+button{
+  position: fixed;
+  bottom: 1.8rem;
+  right: 1.2rem;
+}
+

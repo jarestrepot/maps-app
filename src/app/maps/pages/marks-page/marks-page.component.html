@@ -1,1 +1,20 @@
-<p>marks-page works!</p>
+<div id="map" #map></div>
+<ul
+  class="list-none bg-white rounded text-san-marino-200 p-4 flex flex-col "
+  [ngClass]="{'hidden': currentMarkers.length === 0 }"
+>
+  <li
+    *ngFor="let marker of currentMarkers; let i = index"
+    class="font-bold flex gap-2"
+    (dblClick)="deleteMarker( i )"
+  >
+    <shared-tag-icon [colorIcon]="marker.color" (emitShowTag)="flyTo( marker.marker )" />
+    <shared-trash-icon [colorIcon]="marker.color" (emitDelete)="deleteMarker( i )" />
+  </li>
+</ul>
+
+<button
+  (click)="createMarker()"
+  class="gradient-primary">
+  + Add marker
+</button>

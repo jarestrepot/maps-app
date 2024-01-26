@@ -10,6 +10,7 @@ import { FullScreenPageComponent } from './pages/full-screen-page/full-screen-pa
 import { MarksPageComponent } from './pages/marks-page/marks-page.component';
 import { PropertiesPageComponent } from './pages/properties-page/properties-page.component';
 import { ZoomRangePageComponent } from './pages/zoom-range-page/zoom-range-page.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ZoomRangePageComponent } from './pages/zoom-range-page/zoom-range-page.
   ],
   imports: [
     CommonModule,
-    MapsRoutingModule
+    MapsRoutingModule,
+    SharedModule
   ]
 })
 export class MapsModule { }

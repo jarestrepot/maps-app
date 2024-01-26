@@ -11,6 +11,6 @@ Object.freeze( environment );
 `;
 // Create dir
 mkdirSync('./src/environments', {  recursive: true });
-
+// Write file
 writeFileSync( targetPath, envFileContent );
 

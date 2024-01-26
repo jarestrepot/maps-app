@@ -28,7 +28,7 @@ export class ZoomRangePageComponent implements AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    // Limpieza de los listeners
+    // Limped de los listeners
     this.map?.off('moveend', () => this.map!.remove());
   }
 
