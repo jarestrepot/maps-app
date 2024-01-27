@@ -5,7 +5,8 @@
 
   <!-- LIST MAPS -->
   <div class="w-10/12 float-right border-b-2 p-5 mt-4 grid grid-cols-1 md:grid-cols-3 gap-2">
-      <div
+
+    <div
         *ngFor="let house of houses"
         class="block rounded-lg group  bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700"
       >
@@ -20,6 +21,12 @@
             {{ house.description }}
           </p>
         </div>
+      </div>
+
+      <div
+        class="rounded-lg group bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 grid place-items-center">
+        <h3 class="text-center mt-3 font-bold">Alone Component</h3>
+        <counter-alone class="" [counter]="10" />
       </div>
   </div>
 </section>
