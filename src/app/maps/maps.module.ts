@@ -16,18 +16,18 @@ import { CounterAloneComponent } from '../alone/components/counter-alone/counter
 
 @NgModule({
   declarations: [
-    MiniMapComponent,
-    MapsLayoutComponent,
     FullScreenPageComponent,
+    MapsLayoutComponent,
     MarksPageComponent,
+    MiniMapComponent,
     PropertiesPageComponent,
     ZoomRangePageComponent
   ],
   imports: [
     CommonModule,
+    CounterAloneComponent,
     MapsRoutingModule,
     SharedModule,
-    CounterAloneComponent,
     SideMenuComponent,
   ]
 })
